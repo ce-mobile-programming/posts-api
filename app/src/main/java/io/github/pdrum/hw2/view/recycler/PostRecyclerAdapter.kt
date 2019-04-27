@@ -1,4 +1,4 @@
-package io.github.pdrum.hw2.view
+package io.github.pdrum.hw2.view.recycler
 
 import android.view.LayoutInflater
 import android.view.View

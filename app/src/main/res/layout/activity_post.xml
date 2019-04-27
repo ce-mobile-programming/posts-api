@@ -8,10 +8,10 @@
         tools:context=".view.PostActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/post_recycler_list"
+            android:id="@+id/post_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

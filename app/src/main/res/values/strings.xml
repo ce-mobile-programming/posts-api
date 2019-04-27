@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Hw2</string>
-    <string name="wait">لطفا منتظر بمانید</string>
-    <string name="error">خطایی رخ داده‌است.</string>
+    <string name="wait">Please wait</string>
+    <string name="error">Oops sth went wrong.</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="posts">Posts</string>
+    <string name="comments">Comments</string>
 </resources>
