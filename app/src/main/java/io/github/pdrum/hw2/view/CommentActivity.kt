@@ -14,6 +14,10 @@ import javax.inject.Inject
 
 class CommentActivity : AppCompatActivity(), CommentView {
 
+    companion object {
+        const val POST_ID_KEY = "post_id"
+    }
+
     @Inject
     lateinit var presenter: CommentPresenter
 
@@ -22,6 +26,8 @@ class CommentActivity : AppCompatActivity(), CommentView {
         setContentView(R.layout.activity_comment)
         App.injector.inject(this)
         presenter.setView(this)
+        val postId = intent!!.extras!!.getInt(POST_ID_KEY)
+        presenter.onFetchRequested(postId)
     }
 
     override fun changeComments(comments: List<Comment>) {

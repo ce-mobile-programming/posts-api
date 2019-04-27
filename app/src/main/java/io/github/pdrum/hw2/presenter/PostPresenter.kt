@@ -8,12 +8,14 @@ import javax.inject.Inject
 
 interface PostPresenter: Presenter<PostView> {
     fun onFetchRequested()
+    fun onPostSelected(post: Post)
 }
 
 interface PostView {
     fun showProgress(): ProgressIndicator
     fun showError()
     fun changePosts(posts: List<Post>)
+    fun startCommentsActivity(postId: Int)
 }
 
 class PostPresenterImpl @Inject constructor(private val postClient: PostClient): PostPresenter {
@@ -35,5 +37,9 @@ class PostPresenterImpl @Inject constructor(private val postClient: PostClient):
                 view.showError()
             }
         )
+    }
+
+    override fun onPostSelected(post: Post) {
+        view.startCommentsActivity(post.id)
     }
 }
