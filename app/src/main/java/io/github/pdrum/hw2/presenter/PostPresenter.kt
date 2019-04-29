@@ -29,21 +29,10 @@ class PostPresenterImpl @Inject constructor(private val postClient: PostClient):
         val indicator = view.showProgress()
         postClient.fetchPosts(
             onSuccess = {
-                println("SUCCESS")
-                println("SUCCESS")
-                println("SUCCESS")
-                println("SUCCESS")
-                println("SUCCESS")
                 indicator.hide()
                 view.changePosts(it)
             },
             onFailure = {
-                println("failure")
-                println("failure")
-                println("failure")
-                println("failure")
-                println("failure")
-                println("failure")
                 view.showError()
                 indicator.hide()
             }
